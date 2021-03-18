@@ -21,7 +21,7 @@ from lstnet_model import PreSkipTrans, PostSkipTrans, PreARTrans, PostARTrans, L
 from lstnet_plot import AutoCorrelationPlot, PlotHistory, PlotPrediction
 
 import tensorflow as tf
-
+import os
 
 custom_objects = {
         'PreSkipTrans': PreSkipTrans,
@@ -52,6 +52,8 @@ def train(model, data, init, tensorboard = None):
 
 
 if __name__ == '__main__':
+
+    os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
     try:
         args = GetArguments()
     except SystemExit as err:

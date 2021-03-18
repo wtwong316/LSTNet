@@ -1,0 +1,1 @@
+python3.6 main.py --data=data/nasdaq100.txt --CNNFilters=50 --GRUUnits=50 --skip=12 --no-train --load="save/nasdaq100" --logfilename=log/lstnet --debuglevel=20 --predict=all --plot --series-to-plot=0 
